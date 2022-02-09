@@ -1,0 +1,37 @@
+{
+  "name": "aha-develop.adobe-xd",
+  "description": "Adobe XD integration",
+  "version": "0.0.0",
+  "author": "support@aha.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aha-develop/adobe-xd"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aha-app/aha-develop-react": "link:../aha-develop-react",
+    "@types/react": "^16.8.0"
+  },
+  "ahaExtension": {
+    "cspSources": ["https://xd.adobe.com"],
+    "contributes": {
+      "views": {
+        "adobeXdAttribute": {
+          "title": "Adobe XD",
+          "entryPoint": "src/views/attribute.js",
+          "host": "attribute",
+          "recordTypes": [
+            "Feature",
+            "Requirement",
+            "Epic"
+          ]
+        },
+        "adobeXDPanel": {
+          "title": "Adobe XD",
+          "entryPoint": "src/views/panel.js",
+          "host": "panel"
+        }
+      }
+    }
+  }
+}
