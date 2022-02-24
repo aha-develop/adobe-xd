@@ -1,12 +1,14 @@
 import React from "react";
 import { EmbeddedContent } from "@aha-develop/aha-develop-react";
+import { ensureEmbedFlags } from "../ensureEmbedFlags";
 
 const AhaPanel = aha.getPanel("aha-develop.adobe-xd", "adobeXdPanel", { name: "Adobe XD" });
 
 AhaPanel.on("render", ({ props }) => {
   const { panel } = props;
+  const url = ensureEmbedFlags(panel.settings.url)
 
-  return <EmbeddedContent src={panel.settings.url} />;
+  return <EmbeddedContent src={url} />;
 });
 
 // Settings
