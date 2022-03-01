@@ -1,7 +1,7 @@
 {
-  "name": "aha-develop.adobe-xd",
+  "name": "@aha-develop/adobe-xd",
   "description": "Adobe XD integration",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "support@aha.io",
   "repository": {
     "type": "git",
